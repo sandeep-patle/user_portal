@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" id="loginbox" style="margin-top:50px;">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Sign Up</div>
+      </div>
+      <div class="panel-body" style="padding-top:30px">
+        <%= form_tag users_path, html: { class: 'form-horizontal' } do %>
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= text_field_tag 'user[first_name]', '', class: 'form-control', placeholder: 'First Name', required: true %>
+          </div>
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= text_field_tag 'user[last_name]', '', class: 'form-control', placeholder: 'Last Name', required: true %>
+          </div>
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= email_field_tag 'user[email]', '', class: 'form-control', placeholder: 'Email', required: true %>
+          </div>
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= password_field_tag 'user[password]', '', class: 'form-control', placeholder: 'Password', required: true %>
+          </div>
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= password_field_tag 'user[confirm_password]', '', class: 'form-control', placeholder: 'Confirm Password', required: true %>
+          </div>
+          
+          <div class="input-group" style="margin-bottom: 25px">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <%= text_field_tag 'user[mobile_number]', '', class: 'form-control', placeholder: 'Mobile Number', required: true %>
+          </div>
+          <div class="form-group" style="margin-top:10px">
+            <div class="col-sm-12 controls">
+              <%= submit_tag 'Signup', class: 'btn btn-success' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12 control">
+              <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                Already have an account!
+                <%= link_to "Sign in Here!", new_session_path %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
